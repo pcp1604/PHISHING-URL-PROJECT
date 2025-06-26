@@ -1,0 +1,67 @@
+# Configuration file for DVC (Data Version Control)
+
+# This YAML file defines the parameters used in the DVC pipeline for training a machine learning model.
+# It includes data paths, training configurations, and model settings.
+
+# Data paths for training and testing
+data:
+  # Path to the training data in Parquet format
+  train: data/train.parquet
+
+  # Path to the testing data in Parquet format
+  test: data/test.parquet 
+
+# Training configuration
+train:
+  # Number of hyperparameter optimization trials
+  n_trials: 40
+  
+  # Hyperparameter ranges for Optuna
+  hyperparams:
+    # Maximim n-grams for the first TF-IDF component (word)
+    max_ngram_word:
+      low: 1
+      high: 3
+
+    # Maximim n-grams for the second TF-IDF component (char)
+    max_ngram_char:
+      low: 1
+      high: 5
+
+    # Loweracase option for TF-IDF
+    lowercase:
+      - True
+      - False
+
+    # Use IDF
+    use_idf:
+      - True
+      - False
+
+    # Regularization parameter C for Linear SVC
+    C:
+      low: 1e-7
+      high: 10
+
+    # Tolerance for stopping criteria
+    tol:
+      low: 1e-5
+      high: 1e-1
+
+    # Loss function
+    loss:
+      - hinge          
+      - squared_hinge
+
+    # Method used for calibration
+    calibration:
+      - isotonic
+      - sigmoid
+
+# Model paths
+model:
+  # Path to save the model in pickle format
+  pickle: live/model/model.pkl 
+
+  # Path to save the model in ONNX format
+  onnx: live/model/model.onnx 
