@@ -12,7 +12,7 @@ The dataset used and the latest model are hosted on Hugging Face:
 - Dataset: https://huggingface.co/datasets/pirocheto/phishing-url
 - Model: https://huggingface.co/pirocheto/phishing-url-detection
 
-> ℹ️ You can test the model on the demo page [here](https://pirocheto.github.io/phishing-url-detection/).
+>
 
 ## Consideration Regarding The Model
 
@@ -30,7 +30,7 @@ On the other hand, it could be less efficient than more complex models or those 
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/pirocheto/phishing-url-detection.git
+git clone https://github.com/pcp1604/PHISHING-URL-PROJECT
 
 # 2. Go inside the project
 cd phishing-url-detection
