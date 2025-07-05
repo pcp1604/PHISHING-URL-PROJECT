@@ -10,7 +10,6 @@ This repository contains the code for training a machine learning model for phis
 The dataset used and the latest model are hosted on Hugging Face:
 
 - Dataset: https://huggingface.co/datasets/pirocheto/phishing-url
-- Model: https://huggingface.co/pirocheto/phishing-url-detection
 
 >
 
